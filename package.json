@@ -1,0 +1,42 @@
+{
+    "name": "cypress-template",
+    "version": "1.0.0",
+    "description": "Cypress 12 Template",
+    "main": "index.js",
+    "scripts": {
+        "test": "cypress run",
+        "lint": "npx eslint src test",
+        "lint:fix": "npm run lint -- --fix",
+        "prettier": "npx prettier 5 test --check",
+        "prettier:fix": "npm run prettier -- --write",
+        "format": "npm run prettier:fix && npm run lint:fix"
+    },
+    "devDependencies": {
+        "axe-core": "^4.7.2",
+        "cypress": "^12.13.0",
+        "cypress-axe": "^1.4.0",
+        "cypress-mochawesome-reporter": "^3.2.3",
+        "eslint": "^8.33.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-cypress": "^2.12.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.1.0",
+        "prettier": "2.8.3",
+        "simple-git-hooks": "^2.8.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "simple-git-hooks": {
+        "pre-push": "npm run test"
+    }
+}

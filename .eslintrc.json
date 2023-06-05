@@ -1,0 +1,22 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "plugin:cypress/recommended", "prettier"],
+    "overrides": [],
+    "plugins": ["cypress"],
+    "rules": {
+        "global-require": 0,
+        "import/prefer-default-export": 0,
+        "no-await-in-loop": 0,
+        "no-console": ["warn", { "allow": ["warn"] }],
+        "arrow-body-style": [2, "as-needed"],
+        "no-plusplus": 0,
+        "no-unused-vars": ["error", { "args": "none" }],
+        "cypress/no-assigning-return-values": "error",
+        "cypress/no-unnecessary-waiting": "error",
+        "cypress/assertion-before-screenshot": "warn",
+        "cypress/no-force": "warn"
+    }
+}
