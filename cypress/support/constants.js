@@ -6,3 +6,4 @@ export const severityIndicators = {
 };
 
 export const searchValue = 'Polytechnic University of Catalonia';
+export const courseValue = 'Software Quality Assurance';

@@ -10,21 +10,8 @@ module.exports = defineConfig({
         saveAllAttempts: false
     },
     e2e: {
-        baseUrl: 'https://en.wikipedia.org/',
         setupNodeEvents(on, config) {
             require('cypress-mochawesome-reporter/plugin')(on);
-            on('task', {
-                log(message) {
-                    console.log(message);
-
-                    return null;
-                },
-                table(message) {
-                    console.table(message);
-
-                    return null;
-                }
-            });
         }
     },
     screenshotsFolder: 'reports/images',

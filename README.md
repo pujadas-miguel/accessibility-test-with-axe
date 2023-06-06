@@ -49,10 +49,6 @@ Also, if we open the developer console we can see a description of the error as 
 
 This is the best mode if want to integrate with pipelines since is faster and doesn't requiere a visual interface. This will also generate a video and an html report.
 
-### Example of a test passing fine with some accesibility issues:
-
-![Video of test running](cypress/videos/wikipedia.cy.js.mp4)
-
 # REPORT
 
 At the end of the execution a report will be generated/updated at **reports** folder as an html file.
