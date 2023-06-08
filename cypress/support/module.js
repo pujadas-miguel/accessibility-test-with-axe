@@ -1,5 +1,8 @@
 import { severityIndicators } from '../support/constants';
 
+const object = {};
+const severity = [];
+
 module.exports = (violations) => {
     violations.forEach((violation) => {
         const nodes = Cypress.$(violation.nodes.map((node) => node.target).join(','));
@@ -10,6 +13,12 @@ module.exports = (violations) => {
             message: `[${violation.help}]($violation.helpUrl})`
         });
         violation.nodes.forEach(({ target }) => {
+            severity.push({
+                severity: severityIndicators[violation.impact],
+                component: Object.values(target)[0],
+                description: violation.description,
+                help: violation.helpUrl
+            });
             Cypress.log({
                 name: '🔧 ',
                 consoleProps: () => violation,
@@ -18,4 +27,6 @@ module.exports = (violations) => {
             });
         });
     });
+    object.name = severity;
+    cy.writeFile(Cypress.currentTest.title + '.json', object);
 };

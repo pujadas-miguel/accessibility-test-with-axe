@@ -30,7 +30,7 @@ In GUI mode the Cypress application opens.
 And you can see all the Wikipedia test case.
 If you click it, you will execute the automation test and you will be able to see the logs and the execution in real time.
 
-If an accesibility issue is found, the logs will show where and why.
+If an accessibility issue is found, the logs will show where and why.
 
 ![alt text](img/2.jpg 'Execution of Test Suite')
 
@@ -53,4 +53,8 @@ This is the best mode if want to integrate with pipelines since is faster and do
 
 At the end of the execution a report will be generated/updated at **reports** folder as an html file.
 
-![alt text](img/5.jpg 'Report')
+![alt text](img/5.jpg 'Mochawesome report')
+
+I also created a custom report just for the accessibility violations. Each time a test is executed it will create a JSON file with the name of the test.
+
+![alt text](img/6.jpg 'Violation report')

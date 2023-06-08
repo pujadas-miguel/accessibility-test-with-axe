@@ -7,7 +7,11 @@ module.exports = defineConfig({
         reportPageTitle: 'custom-title',
         embeddedScreenshots: true,
         inlineAssets: true,
-        saveAllAttempts: false
+        saveAllAttempts: false,
+        inline: true,
+        code: true,
+        autoOpen: true,
+        showHooks: 'always'
     },
     e2e: {
         setupNodeEvents(on, config) {
