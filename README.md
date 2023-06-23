@@ -58,3 +58,7 @@ At the end of the execution a report will be generated/updated at **reports** fo
 I also created a custom report just for the accessibility violations. Each time a test is executed it will create a JSON file with the name of the test.
 
 ![alt text](img/6.jpg 'Violation report')
+
+This JSON file can be imported into Microsoft BI to have an easier way to visualize the different issues and analyze them dynamically.
+
+![alt text](img/7.jpg 'Violation report')
