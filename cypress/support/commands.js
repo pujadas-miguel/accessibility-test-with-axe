@@ -1,5 +1,3 @@
-import addContext from 'mochawesome/addContext';
-
 /* WIKIPEDIA */
 
 Cypress.Commands.add('search', (search) => {
@@ -28,8 +26,4 @@ Cypress.Commands.add('findCourse', (course) => {
 
 Cypress.Commands.add('goCourse', () => {
     cy.get('.destacat').first().click();
-});
-
-Cypress.Commands.add('addContext', (context) => {
-    cy.once('test:after:run', (test) => addContext({ test }, context));
 });
